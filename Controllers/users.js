@@ -1,10 +1,13 @@
+const userModel=require('../Models/users');
+
 async function getAllUser(req,res,next){
     try{
-        let response=await parentModel.find({}).populate('employeeId',{firstName:1});
-        res.json(response);
+        // let response=await userModel.find({}).populate('employeeId',{firstName:1});
+        // res.json(response);
+        res.render('home',{name: "Ambesh"});
     }
     catch(error){
-        res.json(error);
+        res.status(500).json(error);
     }
 };
 
